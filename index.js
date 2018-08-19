@@ -6,6 +6,10 @@ var StringDecoder = require('string_decoder').StringDecoder;
 var handlers = require ('./lib/handlers');
 var helpers = require('./lib/helpers');
 
+helpers.sendTwilioSms('4158375309', 'hi there', function(err){
+    console.log('this was the error', err);
+});
+
 //Create an http server
 //The server should respond to all requests with a string
 var server = http.createServer( function (req, res){
